@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+    <test verbose="2" preserve-order="true"
+          name="CalcTest1">
+        <classes>
+            <class name="com.softserve.testng.CalcTest">
+                <methods>
+                    <include name="check2"/>
+                    <include name="check1"/>
+                    <include name="divisionWithException"/>
+                    <include name="infinity"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true"
+          name="CalcTest2">
+        <classes>
+            <class name="com.softserve.testng.CalcTest">
+                <methods>
+                    <include name="check1"/>
+                </methods>
+            </class>
+            <class name="com.softserve.testng.CalcTest2">
+                <methods>
+                    <include name="addTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
