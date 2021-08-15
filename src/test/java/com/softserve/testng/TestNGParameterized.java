@@ -1,10 +1,27 @@
 package com.softserve.testng;
 
-import com.softserve.edu.Calc;
-import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class TestNGParameterized {
+    public void beforeSuite() {
+        System.out.println("class TestNGParameterized, @BeforeSuite beforeSuite");
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+        System.out.println("class TestNGParameterized, @AfterSuite afterSuite");
+    }
+
+    @BeforeTest
+    public void beforeTest() {
+        System.out.println("\tclass TestNGParameterized, @BeforeTest beforeTest");
+    }
+
+    @AfterTest
+    public void afterTest() {
+        System.out.println("\tclass TestNGParameterized, @AfterTest afterTest");
+    }
+
     @BeforeClass
     public void beforeClass() {
         System.out.println("\t\tclass TestNGParameterized, @BeforeClass beforeClass");
@@ -29,6 +46,6 @@ public class TestNGParameterized {
     @Test
     @Parameters(value = "number")
     public void parameterInTest(int number) {
-        System.out.println("\t\t\t\tclass parameterInTest, Number is: "+number);
+        System.out.println("\t\t\t\tclass parameterInTest, Number is: " + number);
     }
 }
