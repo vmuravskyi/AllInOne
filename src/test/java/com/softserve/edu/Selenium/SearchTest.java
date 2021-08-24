@@ -50,8 +50,7 @@ public class SearchTest {
         macPrice = macPrice.replace("$", "").replace(",", "");
         double macPriceDouble = Double.parseDouble(macPrice);
         System.out.println(macPriceDouble);
-        System.out.println(macPriceDouble/2);
-//        Thread.sleep(2000); // FOR PRESENTATION PURPOSE
+//        Thread.sleep(2000);
 
 
     }
