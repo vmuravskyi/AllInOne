@@ -6,16 +6,16 @@ import java.util.concurrent.TimeUnit;
 
 public class Test {
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
 
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             executorService.submit(new Work(i));
         }
         executorService.shutdown();
         System.out.println("All tasks submitted");
         try {
-            executorService.awaitTermination(1, TimeUnit.DAYS);
+            executorService.awaitTermination(1, TimeUnit.HOURS);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -23,20 +23,3 @@ public class Test {
     }
 }
 
-class Work implements Runnable {
-    private int id;
-
-    public Work(int id) {
-        this.id = id;
-    }
-
-    @Override
-    public void run() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Work " + id + " was completed!");
-    }
-}
