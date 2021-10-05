@@ -1,4 +1,4 @@
-package designPatterns.headFirst.observer;
+package designPatterns.headFirst.observer.myObserver;
 
 public interface DisplayElement {
     public void display();
