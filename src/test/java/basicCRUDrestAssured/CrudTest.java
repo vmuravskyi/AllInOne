@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,8 +17,8 @@ public class CrudTest {
     @Test
     public void testPost() throws JsonProcessingException {
         Map<String, Object> map = new HashMap<>();
-        map.put("name", "Volodymyr");
-        map.put("job", "Test Automation Engineer Trainee");
+        map.put("name", "Bob");
+        map.put("job", "Test Automation Engineer");
         String json = new ObjectMapper().writeValueAsString(map);
 
         RestAssured.given()
@@ -45,8 +45,8 @@ public class CrudTest {
     @Test
     public void testPut() throws JsonProcessingException {
         Map<String, Object> map = new HashMap<>();
-        map.put("name", "Volodymyr");
-        map.put("job", "Test Automation Engineer Senior");
+        map.put("name", "John");
+        map.put("job", "Test Automation Engineer");
         String json = new ObjectMapper().writeValueAsString(map);
 
         RestAssured.given()
@@ -64,7 +64,7 @@ public class CrudTest {
     public void testPatch() throws JsonProcessingException {
         Map<String, Object> map = new HashMap<>();
         map.put("name", "Vova");
-        map.put("job", "Test Automation Engineer Senior");
+        map.put("job", "Test Automation Engineer");
         String json = new ObjectMapper().writeValueAsString(map);
 
         RestAssured.given()
