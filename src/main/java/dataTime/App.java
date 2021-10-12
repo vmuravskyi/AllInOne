@@ -15,7 +15,7 @@ public class App {
 
         Date date = null;
         try {
-            date = dateFormat.parse("вівторок, 12 жовтня 2021 р. 11:26:33");
+            date = dateFormat.parse(dateStr);
         } catch (ParseException e) {
             e.printStackTrace();
         }
