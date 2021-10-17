@@ -2,16 +2,8 @@ package designPatterns.builder.builderDone;
 
 public class BuilderLunchOrderDemo {
     public static void main(String[] args) {
-
-        LunchOrder.Builder builder = new LunchOrder.Builder();
-
-        builder.meat("курка")
-                .condiments("часник")
-                .dressing("цезар")
-                .bread("білий");
-
-        // OR
-        LunchOrder lunchOrder = builder.meat("курка")
+        LunchOrder lunchOrder = new LunchOrder.Builder()
+                .meat("курка")
                 .condiments("часник")
                 .dressing("цезар")
                 .bread("білий")
