@@ -1,6 +1,7 @@
 package stream;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Test {
@@ -24,6 +25,7 @@ public class Test {
                     }
                 })
                 .forEach(System.out::println);
+        
 
 
         int[] mas = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
