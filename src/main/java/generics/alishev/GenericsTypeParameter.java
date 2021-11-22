@@ -1,4 +1,4 @@
-package generics;
+package generics.alishev;
 
 public class GenericsTypeParameter {
 
