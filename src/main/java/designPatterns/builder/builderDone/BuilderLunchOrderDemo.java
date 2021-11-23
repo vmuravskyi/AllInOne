@@ -1,17 +1,20 @@
 package designPatterns.builder.builderDone;
 
 public class BuilderLunchOrderDemo {
-    public static void main(String[] args) {
-        LunchOrder lunchOrder = new LunchOrder.Builder()
-                .meat("курка")
-                .condiments("часник")
-                .dressing("цезар")
-                .bread("білий")
-                .build();
 
-        System.out.println(lunchOrder.getBread());
-        System.out.println(lunchOrder.getCondiments());
-        System.out.println(lunchOrder.getDressing());
-        System.out.println(lunchOrder.getMeat());
+    public static void main(String[] args) {
+
+        LunchOrder myOrder = LunchOrder.Builder
+            .newBuilder()
+            .withDressing("dressing")
+            .withBread("grey bread")
+            .withCondiments("some condiments")
+            .withMeat("chicken")
+            .build();
+
+        System.out.println(myOrder.getBread());
+        System.out.println(myOrder.getCondiments());
+        System.out.println(myOrder.getDressing());
+        System.out.println(myOrder.getMeat());
     }
 }

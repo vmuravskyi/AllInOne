@@ -57,26 +57,31 @@ public class LunchOrder {
 
         }
 
+        public static Builder newBuilder() {
+            return new Builder();
+        }
+
+
         public LunchOrder build() {
             return new LunchOrder(this);
         }
 
-        public Builder bread(String bread) {
+        public Builder withBread(String bread) {
             this.bread = bread;
             return this;
         }
 
-        public Builder condiments(String condiments) {
+        public Builder withCondiments(String condiments) {
             this.condiments = condiments;
             return this;
         }
 
-        public Builder dressing(String dressing) {
+        public Builder withDressing(String dressing) {
             this.dressing = dressing;
             return this;
         }
 
-        public Builder meat(String meat) {
+        public Builder withMeat(String meat) {
             this.meat = meat;
             return this;
         }
