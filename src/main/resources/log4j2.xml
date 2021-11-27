@@ -2,6 +2,7 @@
 <Configuration status="INFO">
     <Properties>
         <Property name="LOG_DIR">logs</Property>
+        <Property name="ARCHIVE_LOG_DIR">${LOG_DIR}/archive</Property>
         <Property name="pattern_file">[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} %M{1} - %msg%n</Property>
         <Property name="pattern_console">[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} %M{1} - %msg%n</Property>
     </Properties>
@@ -24,24 +25,21 @@
             <PatternLayout pattern="${pattern_file}"/>
             <BurstFilter level="INFO" rate="16" maxBurst="100"/>
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="1 MB"/>
+                <SizeBasedTriggeringPolicy size="2 MB"/>
             </Policies>
             <DefaultRolloverStrategy max="10"/>
         </RollingFile>
 
-        <RollingFile name="FileRolling" fileName="${LOG_DIR}/text_roll.log" append="true"
-                     filePattern="${ARCHIVE_LOG_DIR}/${data:yyyy-MM-dd}/%d{yyyy-MM-dd_HH-mm}_%i.log">
+        <RollingFile name="FileRolling" fileName="logs/text_roll.log" append="true"
+                     filePattern="logs/${data:yyyy-MM-dd}/%d{yyyy-MM-dd_HH-mm}_%i.log">
             <PatternLayout pattern="${pattern_file}"/>
-            <BurstFilter level="INFO" rate="16" maxBurst="100"/>
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="10 MB"/>
+                <SizeBasedTriggeringPolicy size="500 KB"/>
             </Policies>
             <DefaultRolloverStrategy max="10"/>
         </RollingFile>
-
     </Appenders>
+
     <Loggers>
         <Logger name="Log_Console" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
@@ -57,6 +55,8 @@
         </Logger>
         <Root level="DEBUG">
             <AppenderRef ref="FileLogger"/>
+<!--            <AppenderRef ref="FileZip"/>-->
+<!--            <AppenderRef ref="FileRolling"/>-->
             <AppenderRef ref="Console" level="trace"/>
         </Root>
     </Loggers>
