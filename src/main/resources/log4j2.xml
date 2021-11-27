@@ -15,7 +15,7 @@
             </Filters>
         </Console>
 
-        <File name="FileLogger" fileName="${LOG_DIR}/execution.log" bufferedIO="true">
+        <File name="FileLogger" fileName="${LOG_DIR}/text.log" bufferedIO="true">
             <PatternLayout pattern="${pattern_file}"/>
         </File>
 
