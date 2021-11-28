@@ -1,8 +1,10 @@
 package jdbc.entity;
 
-public class BooksEntity {
+public class BooksEntity extends Entity {
     private int id;
     private String name;
+
+    public BooksEntity() {}
 
     public BooksEntity(int id, String name) {
         this.id = id;
@@ -27,9 +29,8 @@ public class BooksEntity {
 
     @Override
     public String toString() {
-        return "BooksEntity{" +
+        return "BooksEntity: " +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+                ", name=" + name;
     }
 }

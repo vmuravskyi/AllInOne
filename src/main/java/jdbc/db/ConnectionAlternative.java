@@ -1,4 +1,4 @@
-package jdbc;
+package jdbc.db;
 
 import jdbc.entity.BooksEntity;
 import org.apache.logging.log4j.Level;
