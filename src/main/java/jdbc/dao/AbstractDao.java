@@ -12,7 +12,7 @@ public abstract class AbstractDao<K, T extends Entity> {
     protected Connection connection;
 
     public abstract List<T> findAll() throws DaoException;
-    public abstract T findEntityById(K id);
+    public abstract T findEntityById(K id) throws DaoException;
     public abstract boolean delete (T t);
     public abstract boolean deleteByKey(K id);
     public abstract boolean create(T t);
