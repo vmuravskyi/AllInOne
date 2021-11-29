@@ -2,18 +2,18 @@ package jdbc;
 
 import jdbc.dao.impl.BookDaoImpl;
 import jdbc.dao.DaoException;
+import jdbc.dao.impl.EcoNewsImpl;
 import jdbc.entity.BooksEntity;
 
 import java.util.List;
+import jdbc.entity.EcoNewsEntity;
 
 public class TestDao {
     public static void main(String[] args) throws DaoException {
-        BookDaoImpl bookDao = new BookDaoImpl();
-        List<BooksEntity> bookByName = bookDao.findBookByName("Java");
-        System.out.println(bookByName);
+        EcoNewsImpl ecoNews = new EcoNewsImpl();
+        List<EcoNewsEntity> ecoNewsEntities = ecoNews.findAll();
+        System.out.println(ecoNewsEntities);
         System.out.println();
 
-        List<BooksEntity> books = bookDao.findAll();
-        System.out.println(books);
     }
 }

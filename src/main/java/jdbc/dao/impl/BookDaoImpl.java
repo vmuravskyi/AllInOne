@@ -1,5 +1,13 @@
 package jdbc.dao.impl;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import jdbc.dao.BooksDao;
 import jdbc.dao.DaoException;
 import jdbc.entity.BooksEntity;
@@ -7,20 +15,16 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+public class BookDaoImpl extends BooksDao {
 
-public class BookDaoImpl implements BooksDao {
-
-    public static final Logger LOGGER = LogManager.getLogger();
-    private static final String USER_NAME = "root";
-    private static final String PASSWORD = "pass";
-    private static final String CONNECTION_URL = "jdbc:mysql://localhost:3306/datatest";
-    private static final String SQL_SELECT_ALL_BOOKS =
-            "select * from books";
+    private static final Logger LOGGER = LogManager.getLogger();
+    private final String USER_NAME = "root";
+    private final String PASSWORD = "pass";
+    private final String CONNECTION_URL = "jdbc:mysql://localhost:3306/datatest";
+    private final String SQL_SELECT_ALL_BOOKS =
+        "select * from books";
     private static final String SQL_SELECT_BOOK_BY_NAME =
-            "select * from books where name =?";
+        "select * from books where name =?";
 
     @Override
     public List<BooksEntity> findBookByName(String patternName) throws DaoException {

@@ -4,6 +4,8 @@ import jdbc.entity.BooksEntity;
 
 import java.util.List;
 
-public interface BooksDao extends BaseDao <Long, BooksEntity>{
-    List<BooksEntity> findBookByName(String patternName) throws DaoException;
+public abstract class BooksDao extends AbstractDao<Long, BooksEntity> {
+
+    public abstract List<BooksEntity> findBookByName(String patternName) throws DaoException;
+
 }
