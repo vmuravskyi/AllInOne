@@ -18,10 +18,10 @@ import org.apache.logging.log4j.Logger;
 public class BookDaoImpl extends BooksDao {
 
     private static final Logger LOGGER = LogManager.getLogger();
-    private final String USER_NAME = "root";
-    private final String PASSWORD = "pass";
-    private final String CONNECTION_URL = "jdbc:mysql://localhost:3306/datatest";
-    private final String SQL_SELECT_ALL_BOOKS =
+    private static final String USER_NAME = "root";
+    private static final String PASSWORD = "pass";
+    private static final String CONNECTION_URL = "jdbc:mysql://localhost:3306/datatest";
+    private static final String SQL_SELECT_ALL_BOOKS =
         "select * from books";
     private static final String SQL_SELECT_BOOK_BY_NAME =
         "select * from books where name =?";
