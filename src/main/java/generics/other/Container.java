@@ -1,4 +1,4 @@
-package generics;
+package generics.other;
 
 public class Container<T extends Product<T>> {
     T item;

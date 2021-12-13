@@ -1,4 +1,4 @@
-package generics;
+package generics.other;
 
 public class Phone extends Product<Phone> {
     String model;

@@ -1,4 +1,4 @@
-package generics;
+package generics.other;
 
 import java.util.Objects;
 

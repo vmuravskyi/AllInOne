@@ -1,4 +1,4 @@
-package generics;
+package generics.other;
 
 public class Camera extends Product<Camera> {
     int pixels;
