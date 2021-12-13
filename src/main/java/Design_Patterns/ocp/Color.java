@@ -1,6 +1,9 @@
 package Design_Patterns.ocp;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Stream;
 
 enum Color {
@@ -90,16 +93,25 @@ class SizeSpecification implements Specification<Product> {
 
 class AndSpecification<T> implements Specification<T> {
 
-    private Specification<T> first, second;
+//    private Specification<T> first, second;
+    private List<Specification<T>> specifications;
 
-    public AndSpecification(Specification<T> first, Specification<T> second) {
-        this.first = first;
-        this.second = second;
+//    public AndSpecification(Specification<T> first, Specification<T> second) {
+//        this.first = first;
+//        this.second = second;
+//    }
+
+
+
+    public AndSpecification(Specification<T> ... specs) {
+        Collections.addAll(specifications, specs);
     }
 
     @Override
     public boolean isSatisfied(T item) {
-        return first.isSatisfied(item) && second.isSatisfied(item);
+//        return first.isSatisfied(item) && second.isSatisfied(item);
+        return specifications.stream()
+            .allMatch(specification -> specification.isSatisfied(item));
     }
 }
 
