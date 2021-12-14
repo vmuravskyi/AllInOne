@@ -3,6 +3,7 @@ package Design_Patterns.solid.dip;
 import org.javatuples.Triplet;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public enum Relationship {
@@ -38,7 +39,7 @@ class Relationships implements RelationshipBrowser {
 
     @Override
     public List<Person> findAllChildrenOf(String name) {
-        return null;
+        return Collections.emptyList();
     }
 }
 
