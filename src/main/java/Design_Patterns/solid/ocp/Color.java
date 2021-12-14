@@ -1,9 +1,6 @@
-package Design_Patterns.ocp;
+package Design_Patterns.solid.ocp;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Stream;
 
 enum Color {
@@ -93,25 +90,16 @@ class SizeSpecification implements Specification<Product> {
 
 class AndSpecification<T> implements Specification<T> {
 
-//    private Specification<T> first, second;
-    private List<Specification<T>> specifications;
+    private Specification<T> first, second;
 
-//    public AndSpecification(Specification<T> first, Specification<T> second) {
-//        this.first = first;
-//        this.second = second;
-//    }
-
-
-
-    public AndSpecification(Specification<T> ... specs) {
-        Collections.addAll(specifications, specs);
+    public AndSpecification(Specification<T> first, Specification<T> second) {
+        this.first = first;
+        this.second = second;
     }
 
     @Override
     public boolean isSatisfied(T item) {
-//        return first.isSatisfied(item) && second.isSatisfied(item);
-        return specifications.stream()
-            .allMatch(specification -> specification.isSatisfied(item));
+        return first.isSatisfied(item) && second.isSatisfied(item);
     }
 }
 
@@ -120,26 +108,27 @@ class Demo {
     public static void main(String[] args) {
         Product apple = new Product("apple", Color.GREEN, Size.SMALL);
         Product tree = new Product("tree", Color.GREEN, Size.LARGE);
-        Product house = new Product("house", Color.BLUE, Size.LARGE );
-        Product laptop = new Product("laptop", Color.RED, Size.MEDIUM );
+        Product house = new Product("house", Color.BLUE, Size.LARGE);
+        Product laptop = new Product("laptop", Color.RED, Size.MEDIUM);
 
         ProductFilter pf = new ProductFilter();
         List<Product> products = List.of(apple, tree, house, laptop);
         System.out.println("Green products (old):");
         pf.filterByColor(products, Color.GREEN)
-            .forEach(product -> System.out.println(" - " + product.name + " is green"));
+                .forEach(product -> System.out.println(" - " + product.name + " is green"));
 
         BetterFilter bf = new BetterFilter();
-        System.out.println("Green products (new): ");
+        System.out.println("Red products (new): ");
         bf.filter(products, new ColorSpecification(Color.RED))
-            .forEach(product -> System.out.println(" - " + product.name));
+                .forEach(product -> System.out.println(" - " + product.name));
 
-        System.out.println("-------------------------");
+
+        System.out.println("Green and small items are: ");
         bf.filter(products,
                 new AndSpecification<>(
-                    new ColorSpecification(Color.GREEN),
-                    new SizeSpecification(Size.LARGE)))
-            .forEach(product -> System.out.println(" - " + product.name + " is green and large"));
-
+                        new ColorSpecification(Color.GREEN),
+                        new SizeSpecification(Size.SMALL)
+                ))
+                .forEach(p -> System.out.println(" - " + p.name));
     }
 }

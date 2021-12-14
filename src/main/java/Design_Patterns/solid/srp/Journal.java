@@ -1,4 +1,4 @@
-package Design_Patterns.srp;
+package Design_Patterns.solid.srp;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,7 +7,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Journal {
+class Journal {
     private static int count = 0;
     private final List<String> entries = new ArrayList<>();
 
