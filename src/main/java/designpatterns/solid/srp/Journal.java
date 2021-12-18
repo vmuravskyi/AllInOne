@@ -1,4 +1,4 @@
-package Design_Patterns.solid.srp;
+package designpatterns.solid.srp;
 
 import java.io.File;
 import java.io.FileNotFoundException;

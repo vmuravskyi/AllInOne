@@ -1,4 +1,4 @@
-package Design_Patterns.solid.dip;
+package designpatterns.solid.dip;
 
 import org.javatuples.Triplet;
 

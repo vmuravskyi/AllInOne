@@ -1,4 +1,4 @@
-package Design_Patterns.solid.ocp;
+package designpatterns.solid.ocp;
 
 import java.util.List;
 import java.util.stream.Stream;

@@ -1,4 +1,4 @@
-package Design_Patterns.solid.isp;
+package designpatterns.solid.isp;
 
 interface Machine {
     void print(Document document);
