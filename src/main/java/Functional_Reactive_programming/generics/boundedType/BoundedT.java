@@ -1,6 +1,5 @@
 package Functional_Reactive_programming.generics.boundedType;
 
-import Functional_Reactive_programming.generics.lesson01.Data;
 
 import java.util.Arrays;
 import java.util.List;
