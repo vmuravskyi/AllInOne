@@ -2,7 +2,7 @@ package kata.six;
 
 public class writeNumberInExtendedForm {
     public static void main(String[] args) {
-        int test = 4982342;
+        int test = 12345;
         System.out.println(expandedForm(test));
     }
 
