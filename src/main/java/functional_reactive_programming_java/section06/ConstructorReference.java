@@ -17,8 +17,8 @@ public class ConstructorReference {
         thread1.start();
         thread2.start();
 
-        threadGenerator.apply(
-                () -> System.out.println("Task 3 executed"))
+        threadGenerator
+                .apply(() -> System.out.println("Task 3 executed"))
                 .start();
 
     }
