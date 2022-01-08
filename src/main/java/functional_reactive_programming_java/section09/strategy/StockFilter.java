@@ -22,7 +22,7 @@ public class StockFilter {
         List<Stock> filteredData = new ArrayList<>();
 
         for (Stock stock : list) {
-            if (stock.getPrice() >= price)  {
+            if (stock.getPrice() >= price) {
                 filteredData.add(stock);
             }
         }
@@ -33,7 +33,7 @@ public class StockFilter {
         List<Stock> filteredData = new ArrayList<>();
 
         for (Stock stock : list) {
-            if (stock.getPrice() <= price)  {
+            if (stock.getPrice() <= price) {
                 filteredData.add(stock);
             }
         }
