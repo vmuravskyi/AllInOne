@@ -1,30 +1,34 @@
 package functional_reactive_programming_java.section08.chaining;
 
+import java.util.function.Function;
+
 public class Chaining {
 
     public static void main(String[] args) {
 
-        Consumer<String> c1 = System.out::println;
-        Consumer<String> c2 = System.out::println;
+        Consumer<String> c1 = s -> System.out.println(s);
+        Consumer<String> c2 = s -> System.out.println(s);
 
         c1.accept("Hello");
         c2.accept("Hello");
 
-        System.out.println("****************************");
-
-        Consumer<String> c3 = s -> {
+        Consumer<String> c3 = s ->
+        {
             c1.accept(s);
             c2.accept(s);
         };
 
-        c3.accept("Hello");
+        System.out.println("**********************************");
 
-        System.out.println("*****************************");
 
         Consumer<String> c4 = c1.thenAccept(c2);
+        c4.accept("Hello");
 
-        c4.accept("BasicStrong");
+        Function<Integer, Integer> f1 = integer -> integer + 2;
+        Function<Integer, Integer> f2 = s -> s * 2;
+
+        Function<Integer, Integer> f3 = f1.andThen(f2);
+        System.out.println(f3.apply(10));
 
     }
-
 }
