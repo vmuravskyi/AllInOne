@@ -1,5 +1,6 @@
 package functional_reactive_programming_java.section10;
 
+import functional_reactive_programming_java.section10.filter.Printer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -23,16 +24,16 @@ public class StreamIntroduction {
         // java 8
 
         Predicate<Book> byProgrammingGenre = book ->
-                book.getGenre().equalsIgnoreCase("Programming");
+            book.getGenre().equalsIgnoreCase("Programming");
 
         Predicate<Book> highRating = book -> book.getRating() > 3;
 
-        List<Book> collect = books.stream()
-                .parallel()
-                .filter(byProgrammingGenre)
-                .filter(highRating)
-                .collect(Collectors.toList());
-        System.out.println(collect);
+        books.stream()
+            .parallel()
+            .filter(byProgrammingGenre)
+            .filter(highRating)
+            .map(Book::getName)
+            .forEach(Printer::print);
 
     }
 }
