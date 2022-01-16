@@ -1,6 +1,7 @@
 package functional_reactive_programming_java.section11.spliterator;
 
 import functional_reactive_programming_java.section10.filter.Printer;
+
 import java.util.ArrayList;
 import java.util.Spliterator;
 
@@ -17,12 +18,20 @@ public class Characteristics {
         list.add(1);
 
         Spliterator<Integer> spliterator = list.stream().spliterator();
-        int bids = spliterator.characteristics();
-        Printer.print(Integer.bitCount(bids));
+        int bits = spliterator.characteristics();
+        Printer.print(Integer.bitCount(bits));
 
         // OR
 
-        Printer.print();
+        System.out.println(Integer.bitCount(bits | 0x00000010));
+
+        // AND
+
+        System.out.println(Integer.bitCount(bits | 0x00000010));
+
+        boolean b = spliterator.hasCharacteristics(0x00000010);
+        System.out.println(b);
+
 
     }
 
