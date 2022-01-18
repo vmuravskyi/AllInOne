@@ -1,4 +1,4 @@
-package functional_reactive_programming_java.section12.terminal_collectors_1;
+package functional_reactive_programming_java.section12.terminal_collectors;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
