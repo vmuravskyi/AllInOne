@@ -21,7 +21,7 @@ public class CollectorsInAction {
     public static void main(String[] args) throws IOException {
 
         Path path = Path.of(
-            "src/main/java/functional_reactive_programming_java/section12/terminal_collectors_1/EmployeeData.txt");
+            "src/main/java/functional_reactive_programming_java/section12/terminal_collectors/EmployeeData.txt");
         Stream<String> lines = Files.lines(path);
         Stream<String> words = lines.flatMap(s -> Arrays.stream(s.split(",")));
         Spliterator<String> wordSpliterator = words.spliterator();
