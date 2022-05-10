@@ -1,6 +1,6 @@
 package functional_reactive_programming_java.section08.composition;
 
-import designpatterns.design_patterns__and_solid_principles.solid.liskov.Square;
+import design_patterns.design_patterns__and_solid_principles.solid.liskov.Square;
 
 public class Composition {
 

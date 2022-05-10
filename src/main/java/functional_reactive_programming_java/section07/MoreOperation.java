@@ -21,7 +21,7 @@ public class MoreOperation {
         optional.or(() -> Optional.of("New Value")).ifPresent(System.out::println);
         Optional.empty().or(() -> Optional.of("New Value")).ifPresent(System.out::println);
 
-        // equals (optional, either both are empty, or if the values ib optional are equals to each other via equals method)
+        // equals (optional, either both are empty, or if the values ib optional are equals to each old.other via equals method)
         System.out.println(optional.equals(Optional.of("Value")));
 
         //hashcode

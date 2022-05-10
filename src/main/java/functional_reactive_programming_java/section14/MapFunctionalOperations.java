@@ -1,5 +1,6 @@
 package functional_reactive_programming_java.section14;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -9,7 +10,25 @@ import java.util.stream.Collectors;
 
 public class MapFunctionalOperations {
 
+    private static int[] arr = {1, 3, 5, 6, 11, 23};
+    private static int sum = 9;
+
+    public static int[] twoSum(int[] arr, int sum) {
+        int[] result = new int[2];
+        for (int i : arr) {
+            for (int j : arr) {
+                if (i + j == sum) {
+                    result[0] = i;
+                    result[1] = j;
+                }
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
+
+        System.out.println(Arrays.toString(twoSum(arr, sum)));
 
         Map<String, String> contacts = new HashMap<>();
         contacts.put("1237589020", "John");
