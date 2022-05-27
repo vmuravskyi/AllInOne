@@ -14,8 +14,9 @@ public class Server10x {
 
         ServerSocket serverSocket = new ServerSocket(80);
         while (true) {
-            try (Socket socket = serverSocket.accept(); InputStream in = socket.getInputStream();
-                OutputStream out = socket.getOutputStream()) {
+            try (Socket socket = serverSocket.accept();
+                 InputStream in = socket.getInputStream();
+                 OutputStream out = socket.getOutputStream()) {
                 // READ request
                 byte[] request;
                 byte[] response = new Date().toString().getBytes(StandardCharsets.US_ASCII);
