@@ -2,7 +2,7 @@ package java_object_oriented_programming.section05_design_principles.lesson39_op
 
 abstract class Shape {
 
-    public abstract void calculate();
+    public abstract void calculateArea();
 
 }
 
@@ -16,6 +16,11 @@ class Rectangle extends Shape {
         this.width = width;
     }
 
+    @Override
+    public void calculateArea() {
+        System.out.println(height * width);
+    }
+
 }
 
 class Circle extends Shape {
@@ -24,6 +29,11 @@ class Circle extends Shape {
 
     public Circle(double radius) {
         this.radius = radius;
+    }
+
+    @Override
+    public void calculateArea() {
+        System.out.println(Math.PI * Math.pow(radius, 2));
     }
 
 }
@@ -36,29 +46,18 @@ class Triangle extends Shape {
         this.base = b;
         this.height = h;
     }
+
+    @Override
+    public void calculateArea() {
+        System.out.println(0.5 * base * height);
+    }
+
 }
 
 class AreaCalculator {
 
-    Object shape;
-
-    public AreaCalculator(Object shape) {
-        this.shape = shape;
-    }
-
-    public void calculate() {
-        if (shape instanceof Rectangle) {
-            Rectangle r = (Rectangle) shape;
-            System.out.println(r.height * r.width);
-        }
-        if (shape instanceof Circle) {
-            Circle c = (Circle) shape;
-            System.out.println(Math.PI * Math.pow(c.radius, 2));
-        }
-        if (shape instanceof Triangle) {
-            Triangle t = (Triangle) shape;
-            System.out.println(0.5 * t.base * t.height);
-        }
+    public static void calculate(Shape shape) {
+        shape.calculateArea();
     }
 
 }
@@ -67,14 +66,10 @@ public class Area {
 
     public static void main(String[] args) {
 
-        AreaCalculator calc = new AreaCalculator(new Rectangle(3,4));
-        calc.calculate();
-
-        AreaCalculator calculator = new AreaCalculator(new Circle(3));
-        calculator.calculate();
-
-
-
+        AreaCalculator.calculate(new Rectangle(3, 4));
+        AreaCalculator.calculate(new Circle(3));
+        AreaCalculator.calculate(new Triangle(10, 5));
+        
     }
 
 }
