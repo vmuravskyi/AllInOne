@@ -1,6 +1,6 @@
-package reflections_and_annotation.section_02.lesson09_constructor;
+package reflections_and_annotation.section02_reflections.lesson09_constructor;
 
-import reflections_and_annotation.section_02.lesson07_fields.Entity;
+import reflections_and_annotation.section02_reflections.lesson07_fields.Entity;
 
 import java.lang.reflect.Constructor;
 
@@ -8,7 +8,7 @@ public class ConstructorInfo {
 
     public static void main(String[] args) throws Exception {
 
-        Class<?> clss = Class.forName("reflections_and_annotation.section_02.lesson07_fields.Entity");
+        Class<?> clss = Class.forName("reflections_and_annotation.section02_reflections.lesson07_fields.Entity");
         Constructor<?>[] constructors = clss.getConstructors();
 
         for (Constructor<?> constructor : constructors) {

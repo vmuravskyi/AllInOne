@@ -150,6 +150,22 @@
             <version>0.10.1</version>
         </dependency>
 
+        <!-- Hibernate Core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.1.0.Final</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- Hibernate validator -->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>7.0.4.Final</version>
+        </dependency>
+
+
 
 
 

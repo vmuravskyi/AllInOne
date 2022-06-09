@@ -1,4 +1,4 @@
-package reflections_and_annotation.section_02.lesson07_fields;
+package reflections_and_annotation.section02_reflections.lesson07_fields;
 
 public class Entity {
 

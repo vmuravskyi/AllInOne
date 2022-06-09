@@ -1,6 +1,6 @@
-package reflections_and_annotation.section_02.lesson10_modifier;
+package reflections_and_annotation.section02_reflections.lesson10_modifier;
 
-import reflections_and_annotation.section_02.lesson07_fields.Entity;
+import reflections_and_annotation.section02_reflections.lesson07_fields.Entity;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;

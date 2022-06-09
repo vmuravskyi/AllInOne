@@ -1,4 +1,4 @@
-package reflections_and_annotation.section_02.lesson05_class_object;
+package reflections_and_annotation.section02_reflections.lesson05_class_object;
 
 class MyClass {
 
