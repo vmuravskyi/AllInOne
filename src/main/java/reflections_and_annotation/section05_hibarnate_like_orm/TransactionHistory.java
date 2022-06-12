@@ -1,26 +1,27 @@
 package reflections_and_annotation.section05_hibarnate_like_orm;
 
-import reflections_and_annotation.section05_hibarnate_like_orm.annotations.Column;
-import reflections_and_annotation.section05_hibarnate_like_orm.annotations.PrimaryKey;
+
+import reflections_and_annotation.annotations_for_section5_and_section6.Column;
+import reflections_and_annotation.annotations_for_section5_and_section6.PrimaryKey;
 
 public class TransactionHistory {
 
     @PrimaryKey
-    long transactionId;
+    private long transactionId;
 
     @Column
-    int accountNumber;
+    private int accountNumber;
 
     @Column
-    String name;
+    private String name;
 
     @Column
-    String transactionType;
+    private String transactionType;
 
     @Column
-    double amount;
+    private int amount;
 
-    public TransactionHistory(int accountNumber, String name, String transactionType, double amount) {
+    public TransactionHistory(int accountNumber, String name, String transactionType, int amount) {
         this.accountNumber = accountNumber;
         this.name = name;
         this.transactionType = transactionType;
@@ -28,14 +29,14 @@ public class TransactionHistory {
     }
 
     public TransactionHistory() {
-        // default
+
     }
 
     public long getTransactionId() {
         return transactionId;
     }
 
-    public void setTransactionId(long transactionId) {
+    public void setTransactionId(int transactionId) {
         this.transactionId = transactionId;
     }
 
@@ -67,19 +68,15 @@ public class TransactionHistory {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 
     @Override
     public String toString() {
-        return "TransactionHistory{" +
-                "transactionId=" + transactionId +
-                ", accountNumber=" + accountNumber +
-                ", name='" + name + '\'' +
-                ", transactionType='" + transactionType + '\'' +
-                ", amount=" + amount +
-                '}';
+        return "TransactionHistory [transactionId=" + transactionId + ", accountNumber=" + accountNumber + ", name="
+                + name + ", transactionType=" + transactionType + ", amount=" + amount + "]";
     }
+
 
 }
