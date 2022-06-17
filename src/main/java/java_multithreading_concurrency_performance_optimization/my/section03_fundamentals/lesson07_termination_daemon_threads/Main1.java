@@ -1,4 +1,4 @@
-package java_multithreading_concurrency_performance_optimization.my.section_03_fundamentals.lesson07_termination_daemon_threads;
+package java_multithreading_concurrency_performance_optimization.my.section03_fundamentals.lesson07_termination_daemon_threads;
 
 public class Main1 {
 

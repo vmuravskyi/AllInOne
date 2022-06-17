@@ -1,4 +1,4 @@
-package java_multithreading_concurrency_performance_optimization.my.section_02_fundamentals.lesson05_thread_creation_part2;
+package java_multithreading_concurrency_performance_optimization.my.section02_fundamentals.lesson05_thread_creation_part2;
 
 import java.util.ArrayList;
 import java.util.List;

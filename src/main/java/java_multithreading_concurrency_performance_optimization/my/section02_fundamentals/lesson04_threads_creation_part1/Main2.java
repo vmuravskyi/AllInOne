@@ -1,4 +1,4 @@
-package java_multithreading_concurrency_performance_optimization.my.section_02_fundamentals.lesson04_threads_creation_part1;
+package java_multithreading_concurrency_performance_optimization.my.section02_fundamentals.lesson04_threads_creation_part1;
 
 public class Main2 {
 
