@@ -1,21 +1,20 @@
-package Trash.Classes;
+package epam.qaSummer.Trash.Classes;
 
 public class Main {
     public static void main(String[] args) {
 
-        Person.displayCounter();
+	Person.displayCounter();
 
-        Person vova = new Person();
-        Person john = new Person();
+	Person vova = new Person();
+	Person john = new Person();
 //        Person.counter = 123;
-        Person jack = new Person();
+	Person jack = new Person();
 
-        vova.displayId();
-        john.displayId();
+	vova.displayId();
+	john.displayId();
 
-        Person.displayCounter();
+	Person.displayCounter();
 
-
-        jack.displayId();
+	jack.displayId();
     }
 }

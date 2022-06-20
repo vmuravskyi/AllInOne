@@ -1,4 +1,4 @@
-package SortAlgorithms;
+package epam.qaSummer.Other.SortAlgorithms;
 
 public class BubbleSort {
 

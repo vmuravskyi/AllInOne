@@ -1,4 +1,4 @@
-package Trash.Classes.Interfaces;
+package epam.qaSummer.Trash.Classes.Interfaces;
 
 public class Animal  implements Info{
     public int id;

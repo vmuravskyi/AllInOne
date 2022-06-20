@@ -1,4 +1,4 @@
-package Trash.Classes.Interfaces;
+package epam.qaSummer.Trash.Classes.Interfaces;
 
 public interface Info {
     public void showInfo();
