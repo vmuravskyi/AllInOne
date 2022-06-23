@@ -20,7 +20,6 @@ public class Test {
         Collections.sort(animals, new StringLengthComparator());
         System.out.println(animals);
 
-
         List<Integer> numbers = new ArrayList<>();
 
         numbers.add(5);
