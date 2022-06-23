@@ -1,4 +1,4 @@
-package java_programming_masterclass.generics;
+package java_programming_masterclass.section_10_generics;
 
 public abstract class Player {
     private String name;

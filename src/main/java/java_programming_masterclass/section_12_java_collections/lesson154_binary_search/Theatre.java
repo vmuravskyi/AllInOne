@@ -1,4 +1,4 @@
-package java_programming_masterclass.collections.lesson154_binary_search;
+package java_programming_masterclass.section_12_java_collections.lesson154_binary_search;
 
 import java.util.LinkedList;
 import java.util.List;

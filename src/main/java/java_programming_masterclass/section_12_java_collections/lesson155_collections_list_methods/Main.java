@@ -1,4 +1,4 @@
-package java_programming_masterclass.collections.lesson155_collections_list_methods;
+package java_programming_masterclass.section_12_java_collections.lesson155_collections_list_methods;
 
 import java.util.ArrayList;
 import java.util.Collections;

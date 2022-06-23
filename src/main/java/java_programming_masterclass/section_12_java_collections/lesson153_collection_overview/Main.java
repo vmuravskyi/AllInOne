@@ -1,4 +1,4 @@
-package java_programming_masterclass.collections.lesson153_collection_overview;
+package java_programming_masterclass.section_12_java_collections.lesson153_collection_overview;
 
 public class Main {
 
