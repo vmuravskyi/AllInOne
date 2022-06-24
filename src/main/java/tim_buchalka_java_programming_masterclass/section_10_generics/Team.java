@@ -1,4 +1,4 @@
-package java_programming_masterclass.section_10_generics;
+package tim_buchalka_java_programming_masterclass.section_10_generics;
 
 import java.util.ArrayList;
 
