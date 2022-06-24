@@ -2,6 +2,10 @@ package tim_buchalka_java_programming_masterclass.section_11_naming_conventions_
 
 public class Main {
 
-	org.apache.logging.log4j.core.config.Node node = new org.apache.logging.log4j.core.config.Node();
+	public static void main(String[] args) {
 
+		MyWindow myWindow = new MyWindow("Complete Java");
+		myWindow.setVisible(true);
+
+	}
 }
