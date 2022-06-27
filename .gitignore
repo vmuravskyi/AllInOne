@@ -26,3 +26,10 @@ hs_err_pid*
 .DS_Store
 target/
 
+
+# eclipse
+.classpath
+.project
+.settings/
+AllInOne-cs-cleanup.xml
+AllInOne-cs-formatter.xml
