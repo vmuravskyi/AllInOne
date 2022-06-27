@@ -1,4 +1,4 @@
-package java_programming_masterclass.section_12_java_collections.lesson153_collection_overview;
+package tim_buchalka_java_programming_masterclass.section_12_java_collections.lesson153_collection_overview;
 
 public class Main {
 

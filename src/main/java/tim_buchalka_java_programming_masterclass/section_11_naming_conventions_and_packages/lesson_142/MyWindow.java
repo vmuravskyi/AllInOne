@@ -1,4 +1,4 @@
-package java_programming_masterclass.section_11_naming_conventions_and_packages.lesson_142;
+package tim_buchalka_java_programming_masterclass.section_11_naming_conventions_and_packages.lesson_142;
 
 import java.awt.Font;
 import java.awt.Frame;
