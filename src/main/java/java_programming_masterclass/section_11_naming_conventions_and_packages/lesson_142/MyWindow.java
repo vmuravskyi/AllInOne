@@ -6,16 +6,8 @@ import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-/**
- * 
- * @author v.muravskyi
- *
- */
 public class MyWindow extends Frame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 8991222989382017681L;
 
 	public MyWindow(String title) {
@@ -32,8 +24,8 @@ public class MyWindow extends Frame {
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
-		Font sansSerifLarge = new Font("Consolas", Font.BOLD, 18);
-		Font sansSerifSmall = new Font("Consolas", Font.BOLD, 12);
+		Font sansSerifLarge = new Font("Segoe UI", Font.PLAIN, 18);
+		Font sansSerifSmall = new Font("Segoe UI", Font.PLAIN, 12);
 		g.setFont(sansSerifLarge);
 		g.drawString("The complete Java Developer Course", 60, 60);
 		g.setFont(sansSerifSmall);
