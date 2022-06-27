@@ -19,8 +19,7 @@ public class CustomCollector {
                 list1.addAll(list2);
                 return list1;
             },
-            Characteristics.IDENTITY_FINISH
-        );
+            Characteristics.IDENTITY_FINISH);
 
         List<Integer> evens = numbers.stream()
             .filter(integer -> (integer % 2) == 0)
@@ -40,8 +39,7 @@ public class CustomCollector {
                 Collections.sort(list);
                 return list;
             },
-            Characteristics.UNORDERED
-        );
+            Characteristics.UNORDERED);
 
         List<Integer> sortedEvens = numbers.stream()
             .filter(integer -> integer % 2 == 0)
