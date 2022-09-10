@@ -8,7 +8,7 @@ public class RandomAccessFileEx {
     public static void main(String[] args) {
 
         // RandomAccessFile used to read and write from any point in the file (like there was a cursor)
-        try (RandomAccessFile randomAccessFile = new RandomAccessFile("test10.txt", "rw")) {
+        try (RandomAccessFile randomAccessFile = new RandomAccessFile("test10.txt", "rw")) { // second parameter 'read/write'
 
             int a = randomAccessFile.read(); // read 1 character and move cursor 1 position forward
             System.out.println((char) a);
