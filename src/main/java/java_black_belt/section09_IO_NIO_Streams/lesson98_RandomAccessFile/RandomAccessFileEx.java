@@ -1,4 +1,4 @@
-package java_black_belt.section09_IO_NIO_Streams.lesson98_random_access_file;
+package java_black_belt.section09_IO_NIO_Streams.lesson98_RandomAccessFile;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
