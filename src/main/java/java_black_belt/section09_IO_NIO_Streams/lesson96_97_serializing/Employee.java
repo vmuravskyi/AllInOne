@@ -1,4 +1,4 @@
-package java_black_belt.section09_IO_NIO_Streams.lesson96_serializing;
+package java_black_belt.section09_IO_NIO_Streams.lesson96_97_serializing;
 
 import com.google.common.base.MoreObjects;
 import java.io.Serializable;

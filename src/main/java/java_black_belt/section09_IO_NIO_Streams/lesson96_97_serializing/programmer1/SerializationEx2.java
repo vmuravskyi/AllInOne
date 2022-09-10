@@ -1,10 +1,10 @@
-package java_black_belt.section09_IO_NIO_Streams.lesson96_serializing.programmer1;
+package java_black_belt.section09_IO_NIO_Streams.lesson96_97_serializing.programmer1;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java_black_belt.section09_IO_NIO_Streams.lesson96_serializing.Car;
-import java_black_belt.section09_IO_NIO_Streams.lesson96_serializing.Employee;
+import java_black_belt.section09_IO_NIO_Streams.lesson96_97_serializing.Car;
+import java_black_belt.section09_IO_NIO_Streams.lesson96_97_serializing.Employee;
 
 public class SerializationEx2 {
 

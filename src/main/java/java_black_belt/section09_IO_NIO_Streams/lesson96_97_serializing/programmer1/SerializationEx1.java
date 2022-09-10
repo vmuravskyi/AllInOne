@@ -1,4 +1,4 @@
-package java_black_belt.section09_IO_NIO_Streams.lesson96_serializing.programmer1;
+package java_black_belt.section09_IO_NIO_Streams.lesson96_97_serializing.programmer1;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
