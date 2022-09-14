@@ -1,4 +1,4 @@
-package java_black_belt.section09_IO_NIO_Streams.lesson103_Path_Files;
+package java_black_belt.section09_IO_NIO_Streams.lesson103_104_Path_Files;
 
 import java.io.IOException;
 import java.nio.file.Files;
