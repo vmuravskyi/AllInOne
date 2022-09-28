@@ -14,7 +14,7 @@ public class ResultStat extends AbstractComponent {
         super(driver);
     }
 
-    public String getResultStat() {
+    public String getResultStatText() {
         return this.resultStat.getText();
     }
 

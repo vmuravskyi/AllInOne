@@ -1,4 +1,4 @@
-package basicCRUDrestAssured;
+package basiccrudrestassured;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.restassured.RestAssured;

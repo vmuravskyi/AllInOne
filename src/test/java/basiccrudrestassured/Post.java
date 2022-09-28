@@ -1,4 +1,4 @@
-package basicCRUDrestAssured;
+package basiccrudrestassured;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,16 +9,13 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.hamcrest.Matchers.notNullValue;
-
-
-public class Put {
+public class Post {
 
     @Test
-    public void testPut() throws JsonProcessingException {
+    public void testPost() throws JsonProcessingException {
         Map<String, Object> map = new HashMap<>();
         map.put("name", "Volodymyr");
-        map.put("job", "Test Automation Engineer Senior");
+        map.put("j ob", "Test Automation Engineer Trainee");
         String json = new ObjectMapper().writeValueAsString(map);
 
         RestAssured.given()
@@ -26,9 +23,9 @@ public class Put {
                 .contentType(ContentType.JSON).accept(ContentType.JSON)
                 .body(json)
                 .when()
-                .put("https://reqres.in/api/users")
+                .post("https://reqres.in/api/users")
                 .then()
-                .statusCode(200)
+                .statusCode(201)
                 .log().body();
     }
 }

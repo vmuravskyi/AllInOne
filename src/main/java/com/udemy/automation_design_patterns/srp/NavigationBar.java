@@ -12,7 +12,7 @@ public class NavigationBar extends AbstractComponent {
     @FindBy(linkText = "Images")
     private WebElement images;
 
-    @FindBy(linkText = "News")
+    @FindBy(xpath = "//a[@data-hveid='CAEQBQ']/span")
     private WebElement news;
 
     public NavigationBar(WebDriver driver) {

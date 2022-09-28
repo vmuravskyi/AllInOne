@@ -3,7 +3,6 @@ package com.udemy.automation_design_patterns.srp;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SearchWidget extends AbstractComponent {
 
@@ -17,6 +16,21 @@ public class SearchWidget extends AbstractComponent {
     public SearchWidget enter(String enter) {
         this.searchBox.clear();
         this.searchBox.sendKeys(enter);
+        return this;
+    }
+
+    public SearchWidget enterAsHuman(String enter) {
+        this.searchBox.clear();
+        // pretend human is typing
+        enter.chars()
+            .forEach(character -> {
+                this.searchBox.sendKeys(String.valueOf((char) character));
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            });
         return this;
     }
 
