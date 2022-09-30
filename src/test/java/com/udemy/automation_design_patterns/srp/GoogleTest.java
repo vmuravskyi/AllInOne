@@ -1,5 +1,7 @@
 package com.udemy.automation_design_patterns.srp;
 
+import com.udemy.automation_design_patterns.srp.main.GoogleMainPage;
+import com.udemy.automation_design_patterns.srp.result.GoogleResultPage;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;

@@ -1,5 +1,7 @@
-package com.udemy.automation_design_patterns.srp;
+package com.udemy.automation_design_patterns.srp.result;
 
+import com.udemy.automation_design_patterns.srp.common.SearchSuggestion;
+import com.udemy.automation_design_patterns.srp.common.SearchWidget;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 

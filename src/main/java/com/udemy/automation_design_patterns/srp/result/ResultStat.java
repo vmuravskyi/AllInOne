@@ -1,5 +1,6 @@
-package com.udemy.automation_design_patterns.srp;
+package com.udemy.automation_design_patterns.srp.result;
 
+import com.udemy.automation_design_patterns.srp.common.AbstractComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
