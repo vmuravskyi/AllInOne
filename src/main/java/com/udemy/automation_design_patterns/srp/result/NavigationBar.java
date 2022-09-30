@@ -4,6 +4,7 @@ import com.udemy.automation_design_patterns.srp.common.AbstractComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class NavigationBar extends AbstractComponent {
 
@@ -13,7 +14,7 @@ public class NavigationBar extends AbstractComponent {
     @FindBy(linkText = "Images")
     private WebElement images;
 
-    @FindBy(xpath = "//a[@data-hveid='CAEQBQ']/span")
+    @FindBy(xpath = "//a[@data-hveid='CAEQBQ']")
     private WebElement news;
 
     public NavigationBar(WebDriver driver) {
@@ -26,6 +27,7 @@ public class NavigationBar extends AbstractComponent {
     }
 
     public NavigationBar goToNews() {
+        wait.until(ExpectedConditions.visibilityOf(news));
         this.news.click();
         return this;
     }
