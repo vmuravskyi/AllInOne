@@ -1,0 +1,49 @@
+package com.udemy.automation_design_patterns.factory;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
+
+public class GoogleEnglish extends GooglePage {
+
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+
+    @FindBy(name = "q")
+    private WebElement searchBox;
+
+    @FindBy(name = "btnK")
+    private WebElement searchButton;
+
+    @FindBy(css = "div.rc")
+    private List<WebElement> results;
+
+    public GoogleEnglish(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, 10);
+        PageFactory.initElements(driver, this);
+    }
+
+    @Override
+    public void launchSite() {
+        this.driver.get("http://www.google.com");
+    }
+
+    @Override
+    public void search(String keyword) {
+        this.searchBox.sendKeys(keyword);
+        this.wait.until(driver -> this.searchButton.isDisplayed());
+        this.searchButton.click();
+    }
+
+    @Override
+    public int getResultCount() {
+        this.wait.until(driver -> this.results.size() > 1);
+        return this.results.size();
+    }
+
+}
