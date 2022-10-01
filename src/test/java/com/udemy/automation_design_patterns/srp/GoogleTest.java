@@ -1,5 +1,6 @@
 package com.udemy.automation_design_patterns.srp;
 
+import com.udemy.automation_design_patterns.BaseTest;
 import com.udemy.automation_design_patterns.srp.main.GoogleMainPage;
 import com.udemy.automation_design_patterns.srp.result.GoogleResultPage;
 import org.assertj.core.api.Assertions;
@@ -36,7 +37,7 @@ public class GoogleTest extends BaseTest {
     @DataProvider(name = "GoogleWorkFlowData")
     public Object[][] getObject() {
         return new Object[][]{
-            {"selenium", 3},    
+            {"selenium", 3},
             {"docker", 2},
             {"kubernetes", 4},
         };

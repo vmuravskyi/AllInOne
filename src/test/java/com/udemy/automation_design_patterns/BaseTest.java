@@ -1,4 +1,4 @@
-package com.udemy.automation_design_patterns.srp;
+package com.udemy.automation_design_patterns;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

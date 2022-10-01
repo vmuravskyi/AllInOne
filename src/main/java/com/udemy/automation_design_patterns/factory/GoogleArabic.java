@@ -4,29 +4,33 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-class GoogleFrench extends GoogleEnglish {
+class GoogleArabic extends GoogleEnglish {
 
     @FindBy(css = "div#gws-output-pages-elements-homepage_additional_languages__als a")
     private WebElement language;
 
-    public GoogleFrench(WebDriver driver) {
+    @FindBy(css = "span.ly0Ckb")
+    private WebElement keyboardBtn;
+
+    @FindBy(id = "kbd")
+    private WebElement keyboard;
+
+    public GoogleArabic(WebDriver driver) {
         super(driver);
     }
 
     @Override
     public void launchSite() {
-        driver.get("https://google.fr");
+        driver.get("https://google.com.sa");
         language.click();
     }
 
     @Override
     public void search(String keyword) {
+        wait.until(driver -> this.keyboardBtn.isDisplayed());
+        keyboardBtn.click();
+        wait.until(driver -> this.keyboard.isDisplayed());
         super.search(keyword);
-    }
-
-    @Override
-    public int getResultCount() {
-        return super.getResultCount();
     }
 
 }
