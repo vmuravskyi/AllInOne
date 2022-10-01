@@ -36,14 +36,14 @@ class GoogleEnglish extends GooglePage {
     @Override
     public void search(String keyword) {
         searchBox.sendKeys(keyword);
-        wait.until(driver -> this.searchButton.isDisplayed());
+        wait.until(driver -> searchButton.isDisplayed());
         searchButton.click();
     }
 
     @Override
     public int getResultCount() {
-        wait.until(driver -> this.results.size() > 1);
-        return this.results.size();
+        wait.until(driver -> results.size() > 1);
+        return results.size();
     }
 
 }

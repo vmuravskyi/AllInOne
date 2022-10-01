@@ -27,9 +27,9 @@ class GoogleArabic extends GoogleEnglish {
 
     @Override
     public void search(String keyword) {
-        wait.until(driver -> this.keyboardBtn.isDisplayed());
+        wait.until(driver -> keyboardBtn.isDisplayed());
         keyboardBtn.click();
-        wait.until(driver -> this.keyboard.isDisplayed());
+        wait.until(driver -> keyboard.isDisplayed());
         super.search(keyword);
     }
 

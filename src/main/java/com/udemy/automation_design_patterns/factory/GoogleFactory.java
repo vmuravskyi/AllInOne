@@ -11,6 +11,7 @@ public class GoogleFactory {
     private static final Function<WebDriver, GooglePage> ENG = GoogleEnglish::new;
     private static final Function<WebDriver, GooglePage> FR = GoogleFrench::new;
     private static final Function<WebDriver, GooglePage> SA = GoogleArabic::new;
+    private static final Function<WebDriver, GooglePage> ES = GoogleSpanish::new;
 
     private static final Map<String, Function<WebDriver, GooglePage>> MAP = new HashMap<>();
 
@@ -18,6 +19,7 @@ public class GoogleFactory {
         MAP.put("ENG", ENG);
         MAP.put("FR", FR);
         MAP.put("SA", SA);
+        MAP.put("ES", ES);
     }
 
     public static GooglePage get(String language, WebDriver driver) {
