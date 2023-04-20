@@ -58,7 +58,6 @@ public class MethodHandlesDemo {
         courseVarHandle.set(studentNoArgs, "Kotlin");
         String courseValue = (String) courseVarHandle.get(studentNoArgs);
         System.out.println(studentNoArgs);
-
     }
 
 }
