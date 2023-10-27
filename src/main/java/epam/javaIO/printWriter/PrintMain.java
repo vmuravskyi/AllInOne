@@ -3,6 +3,7 @@ package epam.javaIO.printWriter;
 import java.io.*;
 
 public class PrintMain {
+
     public static void main(String[] args) {
 
         File file = new File("src/main/java/epam/javaIO/data/res.txt");
@@ -23,4 +24,5 @@ public class PrintMain {
             e.printStackTrace();
         }
     }
+
 }
