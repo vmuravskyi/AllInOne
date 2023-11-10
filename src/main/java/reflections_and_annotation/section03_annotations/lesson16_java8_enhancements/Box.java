@@ -16,4 +16,5 @@ public class Box<@NotEmpty T> {
             super(size, type);
         }
     }
+
 }

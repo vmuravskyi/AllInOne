@@ -64,13 +64,13 @@ class HotDrinkMachine {
         for (AvailableDrink drink : AvailableDrink.values()) {
             String s = drink.toString();
             String factoryName = "" + Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase();
-            Class<?> factory = Class.forName("designpatterns.design_patterns_udemy.factory.abstractFactory." + factoryName + "Factory");
+            Class<?> factory = Class.forName("design_patterns.design_patterns_udemy.factory.abstractFactory." + factoryName + "Factory");
             factories.put(drink, (IHotDrinkFactory) factory.getDeclaredConstructor().newInstance());
         }
 
         // option 2: find all implementors of IHotDrinkFactory
         Set<Class<? extends IHotDrinkFactory>> types =
-                new Reflections("designpatterns.design_patterns_udemy.factory.abstractFactory.") // ""
+                new Reflections("design_patterns.design_patterns_udemy.factory.abstractFactory.") // ""
                         .getSubTypesOf(IHotDrinkFactory.class);
         for (Class<? extends IHotDrinkFactory> type : types) {
             namedFactories.add(new Pair<>(
@@ -117,7 +117,7 @@ class HotDrinkMachine {
 class AbstractFactoryDemo {
     public static void main(String[] args) throws Exception {
         HotDrinkMachine machine = new HotDrinkMachine();
-        IHotDrink tea = machine.makeDrink(HotDrinkMachine.AvailableDrink.TEA, 200);
+        IHotDrink tea = machine.makeDrink(HotDrinkMachine.AvailableDrink.COFFEE, 200);
         tea.consume();
 
         // interactive
