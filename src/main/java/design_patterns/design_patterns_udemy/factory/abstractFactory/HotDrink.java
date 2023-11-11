@@ -34,8 +34,8 @@ class TeaFactory implements IHotDrinkFactory {
     @Override
     public IHotDrink prepare(int amount) {
         System.out.println(
-                "Put in tea bag, boil water, pour "
-                        + amount + "ml, add lemon, enjoy!"
+            "Put in tea bag, boil water, pour "
+                + amount + "ml, add lemon, enjoy!"
         );
         return new Tea();
     }
@@ -46,8 +46,8 @@ class CoffeeFactory implements IHotDrinkFactory {
     @Override
     public IHotDrink prepare(int amount) {
         System.out.println(
-                "Grind some beans, boil water, pour "
-                        + amount + " ml, add cream and sugar, enjoy!"
+            "Grind some beans, boil water, pour "
+                + amount + " ml, add cream and sugar, enjoy!"
         );
         return new Coffee();
     }
@@ -55,9 +55,9 @@ class CoffeeFactory implements IHotDrinkFactory {
 
 class HotDrinkMachine {
     private Map<AvailableDrink, IHotDrinkFactory> factories =
-            new HashMap<>();
+        new HashMap<>();
     private List<Pair<String, IHotDrinkFactory>> namedFactories =
-            new ArrayList<>();
+        new ArrayList<>();
 
     public HotDrinkMachine() throws Exception {
         // option 1: use an enum
@@ -70,12 +70,12 @@ class HotDrinkMachine {
 
         // option 2: find all implementors of IHotDrinkFactory
         Set<Class<? extends IHotDrinkFactory>> types =
-                new Reflections("design_patterns.design_patterns_udemy.factory.abstractFactory.") // ""
-                        .getSubTypesOf(IHotDrinkFactory.class);
+            new Reflections("design_patterns.design_patterns_udemy.factory.abstractFactory.") // ""
+                .getSubTypesOf(IHotDrinkFactory.class);
         for (Class<? extends IHotDrinkFactory> type : types) {
             namedFactories.add(new Pair<>(
-                    type.getSimpleName().replace("Factory", ""),
-                    type.getDeclaredConstructor().newInstance()
+                type.getSimpleName().replace("Factory", ""),
+                type.getDeclaredConstructor().newInstance()
             ));
         }
     }
@@ -92,12 +92,12 @@ class HotDrinkMachine {
             String s;
             int i, amount;
             if ((s = reader.readLine()) != null
-                    && (i = Integer.parseInt(s)) >= 0
-                    && i < namedFactories.size()) {
+                && (i = Integer.parseInt(s)) >= 0
+                && i < namedFactories.size()) {
                 System.out.println("Specify amount: ");
                 s = reader.readLine();
                 if (s != null
-                        && (amount = Integer.parseInt(s)) > 0) {
+                    && (amount = Integer.parseInt(s)) > 0) {
                     return namedFactories.get(i).getValue1().prepare(amount);
                 }
             }
@@ -112,6 +112,7 @@ class HotDrinkMachine {
     public enum AvailableDrink {
         COFFEE, TEA
     }
+
 }
 
 class AbstractFactoryDemo {
@@ -124,4 +125,5 @@ class AbstractFactoryDemo {
         IHotDrink drink = machine.makeDrink();
         drink.consume();
     }
+
 }
