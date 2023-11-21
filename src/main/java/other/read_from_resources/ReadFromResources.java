@@ -3,8 +3,8 @@ package other.read_from_resources;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -23,7 +23,7 @@ public class ReadFromResources {
         try {
             URL url = ReadFromResources.class.getClassLoader().getResource("txt/Books.txt");
             File file = new File(Objects.requireNonNull(url).getFile());
-            collect = Files.lines(file.toPath()).collect(Collectors.toList());
+            collect = Files.lines(file.toPath(), StandardCharsets.UTF_8).collect(Collectors.toList());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -33,10 +33,6 @@ public class ReadFromResources {
     @Override
     public int hashCode() {
         return super.hashCode();
-    }
-
-    public HashMap<String, Object> main() {
-        return new HashMap<String, Object>();
     }
 
     @Override
